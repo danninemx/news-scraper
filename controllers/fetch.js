@@ -31,8 +31,8 @@ module.exports = function (app) {
         console.log(result.title);
 
         // Site currently uses <figure class="image_default"> that nests <a> for link to full article.
-        result.link = $(this).find("figure>a").attr("href");
-        console.log(siteUrl + result.link);
+        result.link = siteUrl + $(this).find("figure>a").attr("href");
+        console.log(result.link);
 
         // Site currently uses <div> or <section> with class="prose" that nests <p> for summary text.
         result.summary = $(this).find(".prose>p").text().trim();
