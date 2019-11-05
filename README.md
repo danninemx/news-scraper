@@ -1,12 +1,4 @@
-# Texas Tribune Scraper(https://damp-caverns-74679.herokuapp.com/)
-
-### Overview
-
-This is a full-stack web app that lets users view and leave comments on the latest political news in Texas.
-
-Inspiration by [NYT-Mongo-Scraper](https://youtu.be/4ltZr3VPmno), a semi-scraper that leverages NYT API.
-
----
+# [Texas Tribune Scraper](https://damp-caverns-74679.herokuapp.com/)
 
 ## Table of Contents
 
@@ -19,9 +11,13 @@ Inspiration by [NYT-Mongo-Scraper](https://youtu.be/4ltZr3VPmno), a semi-scraper
 
 ## Overview <a name="overview"></a>
 
+This is a full-stack web application that lets users view, store and comment on the latest political news in Texas.
+
+Inspiration by [NYT-Mongo-Scraper](https://youtu.be/4ltZr3VPmno), a semi-scraper that leverages NYT API.
+
 ![news-scraper-screenshot](./public/assets/img/news-scraper.png)
 
-1. User visits the [deployed site](https://damp-caverns-74679.herokuapp.com/).
+####1. User visits the [deployed site](https://damp-caverns-74679.herokuapp.com/).
 
 Alternatively, user can install the app locally via GitHub, Node and NPM:
 
@@ -31,9 +27,7 @@ npm i
 npm start
 ```
 
-`
-
-2. If news articles are not on display, user can press "Scrape New Articles" to initiate a scrape.
+####2. If news articles are not on display, user can press "Scrape New Articles" to initiate a scrape.
 
 This will collect:
 
@@ -42,7 +36,7 @@ This will collect:
 - URL - the url to the original article
 - Photos - any attached image available
 
-3. User can then interact with the articles by:
+####3. User can then interact with the articles by:
 
 - Reading the summary
 - Saving the article
