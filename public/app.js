@@ -72,7 +72,7 @@ $(document).ready(function () {
       url: "/articles/" + thisId,
       data: {
         // Value taken from note textarea
-        body: $("#comment-input").val()
+        "body": $("#comment-input").val()
       }
     })
       // With that done
