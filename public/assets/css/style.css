@@ -1,3 +1,15 @@
+.navbar {
+  background-color: darkblue !important;
+}
+
+.card-header {
+  background-color: darkblue !important;
+}
+
+a.btn {
+  font-weight: 600 !important;
+}
+
 body {
   background-image: url(../img/dust_scratches.png);
   background-repeat: repeat;
@@ -21,7 +33,8 @@ img {
 
 h1,
 h3 {
-  text-shadow: 3px 2px black !important;
+  font-weight: bold !important;
+  text-shadow: 4px 5px rgb(24, 24, 24) !important;
 }
 
 h1 {
