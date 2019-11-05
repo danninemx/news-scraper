@@ -24,7 +24,7 @@ const ArticleSchema = new Schema({
   image: {
     type: String
   },
-  //`saved` is this Article saved? want to be default to false until save button clicked
+  //`saved` Whether this Article is saved. Defaults to false, to be inverted upon click of the save button
   saved: {
     type: Boolean,
     required: true,

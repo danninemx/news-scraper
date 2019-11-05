@@ -14,8 +14,8 @@ const db = require("./models");
 
 let PORT = process.env.PORT || 3000;
 
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/startribunePopulater";
+// If deployed, use the deployed database. Otherwise use the local database
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscraper";
 
 // Initialize Express
 const app = express();
@@ -24,8 +24,7 @@ const app = express();
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
-// Use body-parser for handling form submissions
-//changed to false
+// Use body-parser for handling form submissions changed to false
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Parse application/json
@@ -34,12 +33,10 @@ app.use(bodyParser.json());
 // Use express.static to serve the public folder as a static directory
 app.use(express.static("public"));
 
-// By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
+// By default mongoose uses callbacks for async queries; we are setting it to use promises (.then syntax) instead
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-//mongoose.connect("mongodb://localhost/startribunePopulater");
 mongoose.connect(MONGODB_URI);
-
 
 //Set Handlebars
 const exphbs = require("express-handlebars");

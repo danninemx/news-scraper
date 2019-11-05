@@ -5,7 +5,6 @@ const cheerio = require("cheerio");
 const db = require("../models");
 
 // Initialize Express
-//const app = express();
 const express = require("express");
 const app = express();
 
@@ -14,8 +13,7 @@ const mongoose = require("mongoose");
 
 module.exports = function (app) {
 
-  //this route is broken++++++++++++++++++++++++
-  // Route for grabbing a specific Article by id, populate it with it's note
+  // Route for grabbing a specific Article by id, populate it with its note
   app.get("/articles/:id", function (req, res) {
     // Using the id passed in the id parameter, prepare a query that finds the matching one in our db...
     db.Article.findOne({ _id: req.params.id })
@@ -52,7 +50,7 @@ module.exports = function (app) {
   });
 
 
-  //route for creating a new comment
+  // Route for creating a new comment
   app.post("/notes", function (req, res) {
     // Find all Notes
     db.Note.find({})
@@ -80,7 +78,7 @@ module.exports = function (app) {
       });
   });
 
-  //Route for getting/finding all notes in the database associated with a particular headline/article.
+  // Route for getting/finding all notes in the database associated with a particular headline/article.
   app.get("/notes/:id", function (req, res) {
     if (req.params.id) {
       db.Note.find({
@@ -90,6 +88,7 @@ module.exports = function (app) {
           if (error) {
             console.log(error)
           } else {
+            console.log(`\n Found this note without error: ${doc} \n`);
             res.send(doc);
           }
         });

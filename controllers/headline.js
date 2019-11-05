@@ -1,4 +1,3 @@
-
 const axios = require("axios");
 const cheerio = require("cheerio");
 
@@ -34,7 +33,7 @@ module.exports = function (app) {
   app.put("/savedarticles/:id", function (req, res) {
     db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true })
       .then(function (result) {
-        console.log("this savedarticle is working");
+        console.log("This article has been saved.");
         res.json(result);
 
       })
@@ -49,7 +48,7 @@ module.exports = function (app) {
 
     db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: false })
       .then(function (result) {
-        console.log("this unsaved article is working");
+        console.log("This article has been un-saved.");
         res.json(result);
 
       })
@@ -72,14 +71,15 @@ module.exports = function (app) {
       // Otherwise, send the result of this query to the browser.
       else {
         //res.json(result);
+        console.log(`\n The saved articles are : ${result} \n`);
         res.render("saved", {
-          articles: result,
+          articles: result
         });
       }
     });
   });
 
-  // // Route for getting all articles from the db. Currently no need on site.
+  // // Route for getting all articles from the db. Currently not specifically needed.
   // app.get("/all", function (req, res) {
   //   // Grab every document in the Articles collection
   //   db.Article.find({ saved: false }, function (err, result) {
@@ -99,7 +99,7 @@ module.exports = function (app) {
 
     db.Article.findOneAndRemove({ _id: req.params.id })
       .then(function (result) {
-        console.log("this article has been deleted");
+        console.log("This article has been deleted.");
         res.json(result);
 
       })
