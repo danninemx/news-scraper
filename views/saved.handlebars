@@ -30,9 +30,9 @@
           {{#if this.note}}
           {{!-- {{#each articles.note}} --}}
           {{#each this.note}}
-          <p data-id='{{this._id}}'>{{body}}</p>
+          <p data-id="{{this._id}}">{{body}}</p>
           {{/each}}
-          {{else}}<p class="mt-3" data-id='{{data._id}}'>No comments have been made yet. Feel free to leave one.</p>
+          {{else}}<p class="mt-3" data-id="{{data._id}}">No comments have been made yet. Feel free to leave one.</p>
           {{/if}}
         </div>
       </div>

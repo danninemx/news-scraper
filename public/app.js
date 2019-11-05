@@ -43,6 +43,7 @@ $(document).ready(function () {
 
           // Place the body of the note in the body textarea
           $("#comment-input").val(data.note.body);
+
         } else {
           console.log(`\n No note was found on article w/ data-id of ${thisId}. \n`);
         }
@@ -65,6 +66,11 @@ $(document).ready(function () {
     // Hide the comment modal
     $('#comment-modal').modal('hide');
 
+    // Find a p tag with data-id value.
+    // console.log("\n Current val of p tag with data-id of " + thisId + "is " + $('p[data-id=' + thisId + ']').val() + "\n");
+    // debugger;
+    $('p[data-id=' + thisId + ']').text($("#comment-input").val());
+
     // Run a PUT request to update saved value of article from false to true
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
@@ -78,14 +84,10 @@ $(document).ready(function () {
       // With that done
       .then(function (data) {
 
-        // Find a p tag with data-id value.
-        // console.log("\n Current val of p tag with data-id of " + thisId + "is " + $('p[data-id=' + thisId + ']').val() + "\n");
-        // debugger;
-        $('p[data-id=' + thisId + ']').text(data.body);
-
         // Log the response
-        console.log(`\n Saved comment: ${data.body} \n`);
-        // Empty the notes textarea
+        console.log(`\n Saved comment for data-id of ${data._id} and Note _id of ${data.note} \n`);
+
+        // Empty the notes textarea in modal
         $("#comment-input").val('');
       })
       .catch(function (err) {
@@ -100,7 +102,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     // Grab the id associated with the article from the submit button
-    var thisId = $(this).attr("data-id");
+    let thisId = $(this).attr("data-id");
     console.log("article saved with this id: " + thisId);
     // Run a PUT request to update saved value of article from false to true
     $.ajax({
@@ -109,8 +111,6 @@ $(document).ready(function () {
     })
       // With that done
       .then(function (data) {
-        // Log the response
-        //console.log("suzy lives here");
         location.reload();
       })
       .catch(function (err) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     // Grab the id associated with the article from the submit button
-    var thisId = $(this).attr("data-id");
+    let thisId = $(this).attr("data-id");
     console.log("article saved with this id: " + thisId);
     // Run a PUT request to update saved value of article from false to true
     $.ajax({
@@ -147,7 +147,7 @@ $(document).ready(function () {
   // Click event handler for the delete article button
   $("body").on("click", "#delete-article", function (event) {
     // Grab the id associated with the article from the submit button
-    var thisId = $(this).attr("data-id");
+    let thisId = $(this).attr("data-id");
     console.log("article saved with this id: " + thisId);
     // Run a DELETE request to remove article from database
     $.ajax({
