@@ -15,7 +15,7 @@ const db = require("./models");
 let PORT = process.env.PORT || 3000;
 
 // If deployed, use the deployed database. Otherwise use the local database
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscraper";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Initialize Express
 const app = express();
