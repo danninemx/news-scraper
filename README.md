@@ -1,8 +1,9 @@
-# [Texas Tribune Scraper](https://damp-caverns-74679.herokuapp.com/)
+# <a href="https://damp-caverns-74679.herokuapp.com">Texas Tribune Scraper</a> <img src="https://github.com/danninemx/project-issue-manager/blob/master/public/assets/img/news-scraper-logo.png/" alt="news scraper logo" align="right" height="100"> <a name="top"></a>
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Instructions](#instructions)
 - [Technologies](#technologies)
 - [Future Development](#future)
 - [Developer](#team)
@@ -13,11 +14,17 @@
 
 This is a full-stack web application that lets users view, store and comment on the latest political news in Texas.
 
-Inspiration by [NYT-Mongo-Scraper](https://youtu.be/4ltZr3VPmno), a semi-scraper that leverages NYT API.
+Inspiration by [NYT-Mongo-Scraper](https://youtu.be/4ltZr3VPmno), a quasi-scraper that leverages NYT API.
 
 ![news-scraper-screenshot](./public/assets/img/news-scraper.png)
 
-#### 1. User visits the [deployed site](https://damp-caverns-74679.herokuapp.com/).
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
+
+---
+
+## Instructions <a name="instructions"></a>
+
+#### 1. Visit the [deployed site](https://damp-caverns-74679.herokuapp.com/).
 
 Alternatively, user can install the app locally via GitHub, Node and NPM:
 
@@ -27,36 +34,42 @@ npm i
 npm start
 ```
 
-#### 2. If news articles are not on display, user can press "Scrape New Articles" to initiate a scrape.
+#### 2. If news articles are not on display, press "Scrape New Articles" to initiate a scrape.
 
 This will collect:
 
-- Headline - the title of the article
-- Summary - a short summary of the article
-- URL - the url to the original article
-- Photos - any attached image available
+- `Headline` - the title of the article
+- `Summary` - a short summary of the article
+- `URL` - the url to the original article
+- `Photos` - any attached image available
 
-#### 3. User can then interact with the articles by:
+#### 3. Interact with the articles by:
 
 - Reading the summary
 - Saving the article
 - Adding/removing comments
 
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
+
 ---
 
 ## Technologies <a name="technologies"></a>
 
-- [Node.js](https://nodejs.org/en/)
-- [NPM: Axios](https://www.npmjs.com/package/axios)
-- [NPM: Cheerio](https://www.npmjs.com/package/cheerio)
-- [NPM: Express](https://www.npmjs.com/package/express)
-- [NPM: Express Handlebars](https://www.npmjs.com/package/express-handlebars)
-- [NPM: MongoJS](https://www.npmjs.com/package/mongojs)
-- [NPM: Mongoose](https://www.npmjs.com/package/mongoose)
-- [NPM: Morgan](https://www.npmjs.com/package/morgan)
-- [NPM: Request](https://www.npmjs.com/package/request)
-- [Heroku](https://heroku.com)
-- [Heroku Add-on: mLab MongoDB](https://elements.heroku.com/addons/mongolab)
+| Technology/Dependency Used                                                  | Purpose                        |
+| --------------------------------------------------------------------------- | ------------------------------ |
+| [Node.js](https://nodejs.org/en/)                                           | JavaScript runtime environment |
+| [NPM: Axios](https://www.npmjs.com/package/axios)                           | API call                       |
+| [NPM: Cheerio](https://www.npmjs.com/package/cheerio)                       | Scraping                       |
+| [NPM: Express](https://www.npmjs.com/package/express)                       | Server                         |
+| [NPM: Express Handlebars](https://www.npmjs.com/package/express-handlebars) | Server-side rendering          |
+| [NPM: MongoJS](https://www.npmjs.com/package/mongojs)                       | Database                       |
+| [NPM: Mongoose](https://www.npmjs.com/package/mongoose)                     | Database                       |
+| [NPM: Morgan](https://www.npmjs.com/package/morgan)                         | Logger                         |
+| [NPM: Request](https://www.npmjs.com/package/request)                       | HTTP request                   |
+| [Heroku](https://heroku.com)                                                | Deployment                     |
+| [Heroku Add-on: mLab MongoDB](https://elements.heroku.com/addons/mongolab)  | Database                       |
+
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
 
 ---
 
@@ -67,8 +80,12 @@ This will collect:
 - Additional publishers and subject areas
 - Refactor in declarative frontend framework
 
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
+
 ---
 
 ## Developer <a name="team"></a>
 
 - [Danny Kim](https://github.com/danninemx)
+
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
