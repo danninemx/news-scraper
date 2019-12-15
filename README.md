@@ -1,4 +1,4 @@
-# <a href="https://damp-caverns-74679.herokuapp.com">Texas Tribune Scraper</a> <img src="https://github.com/danninemx/project-issue-manager/blob/master/public/assets/img/news-scraper-logo.png/" alt="news scraper logo" align="right" height="100"> <a name="top"></a>
+# <a href="https://damp-caverns-74679.herokuapp.com">Texas Tribune Scraper</a> <img src="https://github.com/danninemx/news-scraper/blob/master/public/assets/img/news-scraper-logo.png/" alt="news scraper logo" align="right" height="100"> <a name="top"></a>
 
 ## Table of Contents
 
